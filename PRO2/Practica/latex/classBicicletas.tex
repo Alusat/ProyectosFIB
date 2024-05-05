@@ -1,0 +1,317 @@
+\hypertarget{classBicicletas}{}\doxysection{Referencia de la Clase Bicicletas}
+\label{classBicicletas}\index{Bicicletas@{Bicicletas}}
+
+
+Representa el conjunto de características y operaciones del conjunto de bicicletas.  
+
+
+
+
+{\ttfamily \#include $<$Bicicletas.\+hh$>$}
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBicicletas_a6a52018c554f805a40835309a5356909}{Bicicletas}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBicicletas_a01b66c690dca4514bf40b892097f569d}{alta\+\_\+bici}} (string identificador\+\_\+bici, string identificador\+\_\+estacion)
+\begin{DoxyCompactList}\small\item\em Consultora que añade una bicicleta nueva al conjunto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBicicletas_a7d8b2961455812167392d2c1cb2a3bba}{baja\+\_\+bici}} (string \&identificador\+\_\+bici)
+\begin{DoxyCompactList}\small\item\em Consultora que añade una bicicleta nueva al conjunto ~\newline
+ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBicicletas_ac8db3ae5292e98e76e2eacdee33c475e}{mover}} (string \&identificador\+\_\+bici, string \&identificador\+\_\+estacion)
+\begin{DoxyCompactList}\small\item\em Consultora que mueve una bicicleta de una estacion a otra. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBicicletas_a02d06caac04f8fcd4a4c3a1d1522dab6}{subir}} (string identificador\+\_\+bici, string identificador\+\_\+estacion)
+\begin{DoxyCompactList}\small\item\em Consultora que sube una bicicleta de una estacion a otra. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classBicicletas_aa2b8750bde6b19e499c2accba9efac79}{bici\+\_\+existe}} (string identificador\+\_\+bici) const
+\begin{DoxyCompactList}\small\item\em Consultora que indica si existe una bicicleta. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classBicicletas_a46f53bfc37f4e17984fab58c51427426}{estacion\+\_\+respecto\+\_\+bicicleta}} (string identificador\+\_\+bicicleta) const
+\begin{DoxyCompactList}\small\item\em Consultora que retorna el id de la estacion a la cual pertenece cierta bici. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBicicleta}{Bicicleta}} \mbox{\hyperlink{classBicicletas_a8e6fa98a5395bb4adc6459e2fab20fb8}{bici}} (string identificador\+\_\+bicicleta) const
+\begin{DoxyCompactList}\small\item\em Consultora que retorna una bicicleta. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+map$<$ string, \mbox{\hyperlink{classBicicleta}{Bicicleta}} $>$ \mbox{\hyperlink{classBicicletas_a67f278d7b734a97f1e5b91ed09f93153}{id\+\_\+bicicletas\+\_\+bicicleta}}
+\begin{DoxyCompactList}\small\item\em Mapa con todas las id de las bicicletas y su respectiva informacion. \end{DoxyCompactList}\item 
+map$<$ string, string $>$ \mbox{\hyperlink{classBicicletas_ab91995999c6373b79fdecac1031ec659}{id\+\_\+bicicletas\+\_\+estacion}}
+\begin{DoxyCompactList}\small\item\em Mapa con las id de las estacione respecto a las id de las bicicletas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Representa el conjunto de características y operaciones del conjunto de bicicletas. 
+
+Definición en la línea 23 del archivo Bicicletas.\+hh.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classBicicletas_a6a52018c554f805a40835309a5356909}\label{classBicicletas_a6a52018c554f805a40835309a5356909}} 
+\index{Bicicletas@{Bicicletas}!Bicicletas@{Bicicletas}}
+\index{Bicicletas@{Bicicletas}!Bicicletas@{Bicicletas}}
+\doxysubsubsection{\texorpdfstring{Bicicletas()}{Bicicletas()}}
+{\footnotesize\ttfamily Bicicletas\+::\+Bicicletas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. 
+
+\begin{DoxyPrecond}{Precondición}
+cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es un conjunto de bicicletas vacío 
+\end{DoxyPostcond}
+
+
+Definición en la línea 7 del archivo Bicicletas.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{7                        \{}
+\DoxyCodeLine{8     map<string, Bicicleta> \mbox{\hyperlink{classBicicletas_a67f278d7b734a97f1e5b91ed09f93153}{id\_bicicletas\_bicicleta}};}
+\DoxyCodeLine{9     map<string, string> \mbox{\hyperlink{classBicicletas_ab91995999c6373b79fdecac1031ec659}{id\_bicicletas\_estacion}};}
+\DoxyCodeLine{10 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classBicicletas_a01b66c690dca4514bf40b892097f569d}\label{classBicicletas_a01b66c690dca4514bf40b892097f569d}} 
+\index{Bicicletas@{Bicicletas}!alta\_bici@{alta\_bici}}
+\index{alta\_bici@{alta\_bici}!Bicicletas@{Bicicletas}}
+\doxysubsubsection{\texorpdfstring{alta\_bici()}{alta\_bici()}}
+{\footnotesize\ttfamily void Bicicletas\+::alta\+\_\+bici (\begin{DoxyParamCaption}\item[{string}]{identificador\+\_\+bici,  }\item[{string}]{identificador\+\_\+estacion }\end{DoxyParamCaption})}
+
+
+
+Consultora que añade una bicicleta nueva al conjunto. 
+
+\begin{DoxyPrecond}{Precondición}
+la bici no existe 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La bici queda añadida al conjunto de bicicletas 
+\end{DoxyPostcond}
+
+
+Definición en la línea 18 del archivo Bicicletas.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{19 \{}
+\DoxyCodeLine{20     \mbox{\hyperlink{classBicicletas_a67f278d7b734a97f1e5b91ed09f93153}{id\_bicicletas\_bicicleta}}.insert(pair<string, Bicicleta>(identificador\_bicicleta, \mbox{\hyperlink{classBicicleta}{Bicicleta}}(identificador\_bicicleta, identificador\_estacion)));}
+\DoxyCodeLine{21     \mbox{\hyperlink{classBicicletas_ab91995999c6373b79fdecac1031ec659}{id\_bicicletas\_estacion}}.insert(pair<string, string>(identificador\_bicicleta, identificador\_estacion));}
+\DoxyCodeLine{22 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBicicletas_a7d8b2961455812167392d2c1cb2a3bba}\label{classBicicletas_a7d8b2961455812167392d2c1cb2a3bba}} 
+\index{Bicicletas@{Bicicletas}!baja\_bici@{baja\_bici}}
+\index{baja\_bici@{baja\_bici}!Bicicletas@{Bicicletas}}
+\doxysubsubsection{\texorpdfstring{baja\_bici()}{baja\_bici()}}
+{\footnotesize\ttfamily void Bicicletas\+::baja\+\_\+bici (\begin{DoxyParamCaption}\item[{string \&}]{identificador\+\_\+bici }\end{DoxyParamCaption})}
+
+
+
+Consultora que añade una bicicleta nueva al conjunto ~\newline
+ 
+
+\begin{DoxyPrecond}{Precondición}
+la bici no existe 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La bici queda añadida al conjunto de bicicletas 
+\end{DoxyPostcond}
+
+
+Definición en la línea 24 del archivo Bicicletas.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{24                                                           \{}
+\DoxyCodeLine{25     \mbox{\hyperlink{classBicicletas_a67f278d7b734a97f1e5b91ed09f93153}{id\_bicicletas\_bicicleta}}.erase(identificador\_bicicleta);}
+\DoxyCodeLine{26     \mbox{\hyperlink{classBicicletas_ab91995999c6373b79fdecac1031ec659}{id\_bicicletas\_estacion}}.erase(identificador\_bicicleta);}
+\DoxyCodeLine{27 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBicicletas_a8e6fa98a5395bb4adc6459e2fab20fb8}\label{classBicicletas_a8e6fa98a5395bb4adc6459e2fab20fb8}} 
+\index{Bicicletas@{Bicicletas}!bici@{bici}}
+\index{bici@{bici}!Bicicletas@{Bicicletas}}
+\doxysubsubsection{\texorpdfstring{bici()}{bici()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBicicleta}{Bicicleta}} Bicicletas\+::bici (\begin{DoxyParamCaption}\item[{string}]{identificador\+\_\+bicicleta }\end{DoxyParamCaption}) const}
+
+
+
+Consultora que retorna una bicicleta. 
+
+\begin{DoxyPrecond}{Precondición}
+la bicicleta a retornar existe 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retorna la la bicicleta a la qual se refiere el id 
+\end{DoxyPostcond}
+
+
+Definición en la línea 49 del archivo Bicicletas.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{50 \{}
+\DoxyCodeLine{51     \textcolor{keyword}{auto} it = \mbox{\hyperlink{classBicicletas_a67f278d7b734a97f1e5b91ed09f93153}{id\_bicicletas\_bicicleta}}.find(identificador\_bicicleta);}
+\DoxyCodeLine{52     \textcolor{keywordflow}{return} it-\/>second;}
+\DoxyCodeLine{53 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBicicletas_aa2b8750bde6b19e499c2accba9efac79}\label{classBicicletas_aa2b8750bde6b19e499c2accba9efac79}} 
+\index{Bicicletas@{Bicicletas}!bici\_existe@{bici\_existe}}
+\index{bici\_existe@{bici\_existe}!Bicicletas@{Bicicletas}}
+\doxysubsubsection{\texorpdfstring{bici\_existe()}{bici\_existe()}}
+{\footnotesize\ttfamily bool Bicicletas\+::bici\+\_\+existe (\begin{DoxyParamCaption}\item[{string}]{identificador\+\_\+bici }\end{DoxyParamCaption}) const}
+
+
+
+Consultora que indica si existe una bicicleta. 
+
+\begin{DoxyPrecond}{Precondición}
+cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retorna true si existe, false en caso contrario 
+\end{DoxyPostcond}
+
+
+Definición en la línea 43 del archivo Bicicletas.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{44 \{}
+\DoxyCodeLine{45     \textcolor{keyword}{auto} it = \mbox{\hyperlink{classBicicletas_a67f278d7b734a97f1e5b91ed09f93153}{id\_bicicletas\_bicicleta}}.find(identificador\_bici);}
+\DoxyCodeLine{46     \textcolor{keywordflow}{return} (it != \mbox{\hyperlink{classBicicletas_a67f278d7b734a97f1e5b91ed09f93153}{id\_bicicletas\_bicicleta}}.end());}
+\DoxyCodeLine{47 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBicicletas_a46f53bfc37f4e17984fab58c51427426}\label{classBicicletas_a46f53bfc37f4e17984fab58c51427426}} 
+\index{Bicicletas@{Bicicletas}!estacion\_respecto\_bicicleta@{estacion\_respecto\_bicicleta}}
+\index{estacion\_respecto\_bicicleta@{estacion\_respecto\_bicicleta}!Bicicletas@{Bicicletas}}
+\doxysubsubsection{\texorpdfstring{estacion\_respecto\_bicicleta()}{estacion\_respecto\_bicicleta()}}
+{\footnotesize\ttfamily string Bicicletas\+::estacion\+\_\+respecto\+\_\+bicicleta (\begin{DoxyParamCaption}\item[{string}]{identificador\+\_\+bicicleta }\end{DoxyParamCaption}) const}
+
+
+
+Consultora que retorna el id de la estacion a la cual pertenece cierta bici. 
+
+\begin{DoxyPrecond}{Precondición}
+cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retorna el id de la la estacion a la cual pertenece la bici 
+\end{DoxyPostcond}
+
+
+Definición en la línea 13 del archivo Bicicletas.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13                                                                                    \{}
+\DoxyCodeLine{14     \textcolor{keyword}{auto} it = \mbox{\hyperlink{classBicicletas_a67f278d7b734a97f1e5b91ed09f93153}{id\_bicicletas\_bicicleta}}.find(identificador\_bicicleta);}
+\DoxyCodeLine{15     \textcolor{keywordflow}{return} it-\/>second.ubicacion();}
+\DoxyCodeLine{16 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBicicletas_ac8db3ae5292e98e76e2eacdee33c475e}\label{classBicicletas_ac8db3ae5292e98e76e2eacdee33c475e}} 
+\index{Bicicletas@{Bicicletas}!mover@{mover}}
+\index{mover@{mover}!Bicicletas@{Bicicletas}}
+\doxysubsubsection{\texorpdfstring{mover()}{mover()}}
+{\footnotesize\ttfamily void Bicicletas\+::mover (\begin{DoxyParamCaption}\item[{string \&}]{identificador\+\_\+bici,  }\item[{string \&}]{identificador\+\_\+estacion }\end{DoxyParamCaption})}
+
+
+
+Consultora que mueve una bicicleta de una estacion a otra. 
+
+\begin{DoxyPrecond}{Precondición}
+existe la bicicleta, la estacion objetivo existe y no es la misma en la cual se encuentra la bicicleta. La bicicleta cabe 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se da de baja la bicicleta en su estacion actual, se da de alta en la nueva estacion y su historial de viajes queda actualizado. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 29 del archivo Bicicletas.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{30 \{}
+\DoxyCodeLine{31     \textcolor{keyword}{auto} it = \mbox{\hyperlink{classBicicletas_ab91995999c6373b79fdecac1031ec659}{id\_bicicletas\_estacion}}.find(identificador\_bici);}
+\DoxyCodeLine{32     it-\/>second = identificador\_estacion;}
+\DoxyCodeLine{33     \textcolor{keyword}{auto} iter = \mbox{\hyperlink{classBicicletas_a67f278d7b734a97f1e5b91ed09f93153}{id\_bicicletas\_bicicleta}}.find(identificador\_bici);}
+\DoxyCodeLine{34     iter-\/>second.mover(identificador\_estacion);}
+\DoxyCodeLine{35 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBicicletas_a02d06caac04f8fcd4a4c3a1d1522dab6}\label{classBicicletas_a02d06caac04f8fcd4a4c3a1d1522dab6}} 
+\index{Bicicletas@{Bicicletas}!subir@{subir}}
+\index{subir@{subir}!Bicicletas@{Bicicletas}}
+\doxysubsubsection{\texorpdfstring{subir()}{subir()}}
+{\footnotesize\ttfamily void Bicicletas\+::subir (\begin{DoxyParamCaption}\item[{string}]{identificador\+\_\+bici,  }\item[{string}]{identificador\+\_\+estacion }\end{DoxyParamCaption})}
+
+
+
+Consultora que sube una bicicleta de una estacion a otra. 
+
+\begin{DoxyPrecond}{Precondición}
+existe la bicicleta, la estacion objetivo existe y se situa arriba de la estacion actual 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se da de baja la bicicleta en su estacion actual, se da de alta en la nueva estacion y su historial de viajes NO queda actualizado. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 37 del archivo Bicicletas.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{37                                                                                \{}
+\DoxyCodeLine{38     \textcolor{keyword}{auto} it = \mbox{\hyperlink{classBicicletas_ab91995999c6373b79fdecac1031ec659}{id\_bicicletas\_estacion}}.find(identificador\_bici);}
+\DoxyCodeLine{39     it-\/>second = identificador\_estacion;}
+\DoxyCodeLine{40     \textcolor{keyword}{auto} iter = \mbox{\hyperlink{classBicicletas_a67f278d7b734a97f1e5b91ed09f93153}{id\_bicicletas\_bicicleta}}.find(identificador\_bici);}
+\DoxyCodeLine{41     iter-\/>second.mod\_ubicacion(identificador\_estacion);}
+\DoxyCodeLine{42 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classBicicletas_a67f278d7b734a97f1e5b91ed09f93153}\label{classBicicletas_a67f278d7b734a97f1e5b91ed09f93153}} 
+\index{Bicicletas@{Bicicletas}!id\_bicicletas\_bicicleta@{id\_bicicletas\_bicicleta}}
+\index{id\_bicicletas\_bicicleta@{id\_bicicletas\_bicicleta}!Bicicletas@{Bicicletas}}
+\doxysubsubsection{\texorpdfstring{id\_bicicletas\_bicicleta}{id\_bicicletas\_bicicleta}}
+{\footnotesize\ttfamily map$<$string, \mbox{\hyperlink{classBicicleta}{Bicicleta}}$>$ Bicicletas\+::id\+\_\+bicicletas\+\_\+bicicleta\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Mapa con todas las id de las bicicletas y su respectiva informacion. 
+
+
+
+Definición en la línea 27 del archivo Bicicletas.\+hh.
+
+\mbox{\Hypertarget{classBicicletas_ab91995999c6373b79fdecac1031ec659}\label{classBicicletas_ab91995999c6373b79fdecac1031ec659}} 
+\index{Bicicletas@{Bicicletas}!id\_bicicletas\_estacion@{id\_bicicletas\_estacion}}
+\index{id\_bicicletas\_estacion@{id\_bicicletas\_estacion}!Bicicletas@{Bicicletas}}
+\doxysubsubsection{\texorpdfstring{id\_bicicletas\_estacion}{id\_bicicletas\_estacion}}
+{\footnotesize\ttfamily map$<$string, string$>$ Bicicletas\+::id\+\_\+bicicletas\+\_\+estacion\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Mapa con las id de las estacione respecto a las id de las bicicletas. 
+
+
+
+Definición en la línea 29 del archivo Bicicletas.\+hh.
+
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Bicicletas_8hh}{Bicicletas.\+hh}}\item 
+\mbox{\hyperlink{Bicicletas_8cc}{Bicicletas.\+cc}}\end{DoxyCompactItemize}

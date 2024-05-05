@@ -1,0 +1,161 @@
+\hypertarget{program_8cc}{}\doxysection{Referencia del Archivo program.\+cc}
+\label{program_8cc}\index{program.cc@{program.cc}}
+
+
+Programa principal para la practica Bicing bifurcado.  
+
+
+{\ttfamily \#include \char`\"{}Estaciones.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Bicicletas.\+hh\char`\"{}}\newline
+Dependencia gráfica adjunta para program.\+cc\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{program_8cc__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Programa principal para la practica Bicing bifurcado. Se encarga de recibir inputs, controlar errores y escribir outputs (la mayor�a),. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Programa principal para la practica Bicing bifurcado. 
+
+
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{program.cc@{program.cc}!main@{main}}
+\index{main@{main}!program.cc@{program.cc}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Programa principal para la practica Bicing bifurcado. Se encarga de recibir inputs, controlar errores y escribir outputs (la mayor�a),. 
+
+
+
+Definición en la línea 21 del archivo program.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{22 \{}
+\DoxyCodeLine{23     \mbox{\hyperlink{classEstaciones}{Estaciones}} estaciones;}
+\DoxyCodeLine{24     \mbox{\hyperlink{classBicicletas}{Bicicletas}} bicicletas;}
+\DoxyCodeLine{25     estaciones.\mbox{\hyperlink{classEstaciones_a5be92d8bf78e59056818d9336f4e4fc2}{leer\_bicicletas}}();}
+\DoxyCodeLine{26     \textcolor{keywordtype}{string} operacion;}
+\DoxyCodeLine{27     cin >> operacion;}
+\DoxyCodeLine{28     \textcolor{keywordflow}{while} (operacion != \textcolor{stringliteral}{"{}fin"{}}) \{ \textcolor{comment}{//todas las acciones de la derecha presuponiendo que no hay ningun error}}
+\DoxyCodeLine{29         \textcolor{keywordflow}{if} (operacion == \textcolor{stringliteral}{"{}alta\_bici"{}} or operacion == \textcolor{stringliteral}{"{}ab"{}}) \textcolor{comment}{// la bici pasa a estar en dicha estacion}}
+\DoxyCodeLine{30         \{}
+\DoxyCodeLine{31             \textcolor{keywordtype}{string} identificador\_bici, identificador\_estacion;}
+\DoxyCodeLine{32             cin >> identificador\_bici >> identificador\_estacion;}
+\DoxyCodeLine{33             cout << \textcolor{stringliteral}{"{}\#ab "{}} << identificador\_bici << \textcolor{charliteral}{' '} << identificador\_estacion << endl;}
+\DoxyCodeLine{34             \textcolor{keywordflow}{if} (bicicletas.\mbox{\hyperlink{classBicicletas_aa2b8750bde6b19e499c2accba9efac79}{bici\_existe}}(identificador\_bici)) cout << \textcolor{stringliteral}{"{}error: la bici ya existe"{}} << endl;}
+\DoxyCodeLine{35             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (!estaciones.\mbox{\hyperlink{classEstaciones_a03e9465a72ed024c7402a27e50bf35d5}{estacion\_existe}}(identificador\_estacion)) cout << \textcolor{stringliteral}{"{}error: la estacion no existe"{}} << endl;}
+\DoxyCodeLine{36             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (estaciones.\mbox{\hyperlink{classEstaciones_ac3fc0f143e7f71404e66059c9127fbc8}{estacion}}(identificador\_estacion).\mbox{\hyperlink{classEstacion_acf10eef443ddc0dce8f10aa3a86fa6da}{n\_bicis}}() >= estaciones.\mbox{\hyperlink{classEstaciones_ac3fc0f143e7f71404e66059c9127fbc8}{estacion}}(identificador\_estacion).\mbox{\hyperlink{classEstacion_a3d0268703c38299ca5138d017aff9242}{tamano}}()) cout << \textcolor{stringliteral}{"{}error: la bici no cabe"{}} << endl;}
+\DoxyCodeLine{37             \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{38                 \textcolor{comment}{// estaciones.estacion(identificador\_estacion).meter\_bicicleta(identificador\_bici); }}
+\DoxyCodeLine{39                 estaciones.\mbox{\hyperlink{classEstaciones_a394cf68aaed821aa6c08d7995f8a6124}{alta\_bici}}(identificador\_estacion, identificador\_bici);}
+\DoxyCodeLine{40                 bicicletas.\mbox{\hyperlink{classBicicletas_a01b66c690dca4514bf40b892097f569d}{alta\_bici}}(identificador\_bici, identificador\_estacion);}
+\DoxyCodeLine{41             \}}
+\DoxyCodeLine{42         \}}
+\DoxyCodeLine{43         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (operacion == \textcolor{stringliteral}{"{}baja\_bici"{}} or operacion == \textcolor{stringliteral}{"{}bb"{}})  \textcolor{comment}{// la bici deja de estar en dicha estacion}}
+\DoxyCodeLine{44         \{}
+\DoxyCodeLine{45             \textcolor{keywordtype}{string} identificador\_bici;}
+\DoxyCodeLine{46             cin >> identificador\_bici;}
+\DoxyCodeLine{47             cout << \textcolor{stringliteral}{"{}\#bb "{}} << identificador\_bici << endl;}
+\DoxyCodeLine{48             \textcolor{keywordflow}{if} (!bicicletas.\mbox{\hyperlink{classBicicletas_aa2b8750bde6b19e499c2accba9efac79}{bici\_existe}}(identificador\_bici)) cout << \textcolor{stringliteral}{"{}error: la bici no existe"{}} << endl;}
+\DoxyCodeLine{49             \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{50                 \textcolor{keywordtype}{string} estacion;}
+\DoxyCodeLine{51                 estacion = bicicletas.\mbox{\hyperlink{classBicicletas_a46f53bfc37f4e17984fab58c51427426}{estacion\_respecto\_bicicleta}}(identificador\_bici);}
+\DoxyCodeLine{52                 estaciones.\mbox{\hyperlink{classEstaciones_a720046e24c44bdbf0570ce03d8e82988}{baja\_bici}}(estacion, identificador\_bici);}
+\DoxyCodeLine{53                 bicicletas.\mbox{\hyperlink{classBicicletas_a7d8b2961455812167392d2c1cb2a3bba}{baja\_bici}}(identificador\_bici);}
+\DoxyCodeLine{54             \}}
+\DoxyCodeLine{55         \}}
+\DoxyCodeLine{56         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (operacion == \textcolor{stringliteral}{"{}estacion\_bici"{}} or operacion == \textcolor{stringliteral}{"{}eb"{}})  \textcolor{comment}{// se escribe el identificador de la estacion en la cual esta la bici}}
+\DoxyCodeLine{57         \{}
+\DoxyCodeLine{58             \textcolor{keywordtype}{string} identificador\_bici;}
+\DoxyCodeLine{59             cin >> identificador\_bici;}
+\DoxyCodeLine{60             cout << \textcolor{stringliteral}{"{}\#eb "{}} << identificador\_bici << endl;}
+\DoxyCodeLine{61             \textcolor{keywordflow}{if} (!bicicletas.\mbox{\hyperlink{classBicicletas_aa2b8750bde6b19e499c2accba9efac79}{bici\_existe}}(identificador\_bici)) cout << \textcolor{stringliteral}{"{}error: la bici no existe"{}} << endl;}
+\DoxyCodeLine{62             \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{63                 cout << bicicletas.\mbox{\hyperlink{classBicicletas_a46f53bfc37f4e17984fab58c51427426}{estacion\_respecto\_bicicleta}}(identificador\_bici) << endl;}
+\DoxyCodeLine{64             \}}
+\DoxyCodeLine{65         \}}
+\DoxyCodeLine{66         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (operacion == \textcolor{stringliteral}{"{}viajes\_bici"{}} or operacion == \textcolor{stringliteral}{"{}vb"{}})  \textcolor{comment}{// se escriben los viajes que ha hecho la bici}}
+\DoxyCodeLine{67         \{}
+\DoxyCodeLine{68             \textcolor{keywordtype}{string} identificador\_bici;}
+\DoxyCodeLine{69             cin >> identificador\_bici;}
+\DoxyCodeLine{70             cout << \textcolor{stringliteral}{"{}\#vb "{}} << identificador\_bici << endl;}
+\DoxyCodeLine{71             \textcolor{keywordflow}{if} (!bicicletas.\mbox{\hyperlink{classBicicletas_aa2b8750bde6b19e499c2accba9efac79}{bici\_existe}}(identificador\_bici)) cout << \textcolor{stringliteral}{"{}error: la bici no existe"{}} << endl;}
+\DoxyCodeLine{72             \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{73                 bicicletas.\mbox{\hyperlink{classBicicletas_a8e6fa98a5395bb4adc6459e2fab20fb8}{bici}}(identificador\_bici).\mbox{\hyperlink{classBicicleta_ab89325e8dcabdfc9edb93c51fb2132ed}{escribir\_historial}}();}
+\DoxyCodeLine{74             \}}
+\DoxyCodeLine{75         \}}
+\DoxyCodeLine{76         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (operacion == \textcolor{stringliteral}{"{}mover\_bici"{}} or operacion == \textcolor{stringliteral}{"{}mb"{}})  \textcolor{comment}{// la bici pasa de estar en su estacion actual, a la estacion destino}}
+\DoxyCodeLine{77         \{}
+\DoxyCodeLine{78             \textcolor{keywordtype}{string} identificador\_bici, identificador\_estacion;}
+\DoxyCodeLine{79             cin >> identificador\_bici >> identificador\_estacion;}
+\DoxyCodeLine{80             cout << \textcolor{stringliteral}{"{}\#mb "{}} << identificador\_bici << \textcolor{charliteral}{' '} << identificador\_estacion << endl;}
+\DoxyCodeLine{81             \textcolor{keywordflow}{if} (!bicicletas.\mbox{\hyperlink{classBicicletas_aa2b8750bde6b19e499c2accba9efac79}{bici\_existe}}(identificador\_bici)) cout << \textcolor{stringliteral}{"{}error: la bici no existe"{}} << endl;}
+\DoxyCodeLine{82             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (!estaciones.\mbox{\hyperlink{classEstaciones_a03e9465a72ed024c7402a27e50bf35d5}{estacion\_existe}}(identificador\_estacion)) cout << \textcolor{stringliteral}{"{}error: la estacion no existe"{}} << endl;}
+\DoxyCodeLine{83             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (bicicletas.\mbox{\hyperlink{classBicicletas_a46f53bfc37f4e17984fab58c51427426}{estacion\_respecto\_bicicleta}}(identificador\_bici) == identificador\_estacion) cout << \textcolor{stringliteral}{"{}error: la bici ya esta en el sitio"{}} << endl;}
+\DoxyCodeLine{84             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (estaciones.\mbox{\hyperlink{classEstaciones_ac3fc0f143e7f71404e66059c9127fbc8}{estacion}}(identificador\_estacion).\mbox{\hyperlink{classEstacion_acf10eef443ddc0dce8f10aa3a86fa6da}{n\_bicis}}() >= estaciones.\mbox{\hyperlink{classEstaciones_ac3fc0f143e7f71404e66059c9127fbc8}{estacion}}(identificador\_estacion).\mbox{\hyperlink{classEstacion_a3d0268703c38299ca5138d017aff9242}{tamano}}()) cout << \textcolor{stringliteral}{"{}error: la bici no cabe"{}} << endl;}
+\DoxyCodeLine{85             \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{86                 \textcolor{keywordtype}{string} identificador\_estacion\_actual = bicicletas.\mbox{\hyperlink{classBicicletas_a46f53bfc37f4e17984fab58c51427426}{estacion\_respecto\_bicicleta}}(identificador\_bici);}
+\DoxyCodeLine{87                 bicicletas.\mbox{\hyperlink{classBicicletas_ac8db3ae5292e98e76e2eacdee33c475e}{mover}}(identificador\_bici, identificador\_estacion);}
+\DoxyCodeLine{88                 estaciones.\mbox{\hyperlink{classEstaciones_a76dce4f1eef556fbbb88df2743115d03}{mover}}(identificador\_bici, identificador\_estacion, identificador\_estacion\_actual);}
+\DoxyCodeLine{89             \}}
+\DoxyCodeLine{90         \}}
+\DoxyCodeLine{91         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (operacion == \textcolor{stringliteral}{"{}bicis\_estacion"{}} or operacion == \textcolor{stringliteral}{"{}be"{}})  \textcolor{comment}{//  se escribe que bicis tiene cierta estacion por orden de identificador}}
+\DoxyCodeLine{92         \{}
+\DoxyCodeLine{93             \textcolor{keywordtype}{string} identificador\_estacion;}
+\DoxyCodeLine{94             cin >> identificador\_estacion;}
+\DoxyCodeLine{95             cout << \textcolor{stringliteral}{"{}\#be "{}} << identificador\_estacion << endl;}
+\DoxyCodeLine{96             \textcolor{keywordflow}{if} (!estaciones.\mbox{\hyperlink{classEstaciones_a03e9465a72ed024c7402a27e50bf35d5}{estacion\_existe}}(identificador\_estacion)) cout << \textcolor{stringliteral}{"{}error: la estacion no existe"{}} << endl;}
+\DoxyCodeLine{97             \textcolor{keywordflow}{else} estaciones.\mbox{\hyperlink{classEstaciones_ac3fc0f143e7f71404e66059c9127fbc8}{estacion}}(identificador\_estacion).\mbox{\hyperlink{classEstacion_aa3d1677e87ac28e8798f66593fa1c592}{escribe\_bicis}}();}
+\DoxyCodeLine{98         \}}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (operacion == \textcolor{stringliteral}{"{}modificar\_capacidad"{}} or operacion == \textcolor{stringliteral}{"{}mc"{}})  \textcolor{comment}{// cambia el numero de bicis que puede acoger una estacion}}
+\DoxyCodeLine{101         \{}
+\DoxyCodeLine{102             \textcolor{keywordtype}{string} identificador\_estacion;}
+\DoxyCodeLine{103             \textcolor{keywordtype}{int} x;}
+\DoxyCodeLine{104             cin >> identificador\_estacion >> x;}
+\DoxyCodeLine{105             cout << \textcolor{stringliteral}{"{}\#mc "{}} << identificador\_estacion << \textcolor{charliteral}{' '} << x << endl;}
+\DoxyCodeLine{106             \textcolor{keywordflow}{if} (!estaciones.\mbox{\hyperlink{classEstaciones_a03e9465a72ed024c7402a27e50bf35d5}{estacion\_existe}}(identificador\_estacion)) cout << \textcolor{stringliteral}{"{}error: la estacion no existe"{}} << endl;}
+\DoxyCodeLine{107             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (x < estaciones.\mbox{\hyperlink{classEstaciones_ac3fc0f143e7f71404e66059c9127fbc8}{estacion}}(identificador\_estacion).\mbox{\hyperlink{classEstacion_acf10eef443ddc0dce8f10aa3a86fa6da}{n\_bicis}}()) cout << \textcolor{stringliteral}{"{}error: capacidad insuficiente"{}} << endl;}
+\DoxyCodeLine{108             \textcolor{keywordflow}{else} estaciones.\mbox{\hyperlink{classEstaciones_ac532bf089c506f49abc127173fd97c98}{modificar\_capacidad}}(identificador\_estacion, x);}
+\DoxyCodeLine{109         \}}
+\DoxyCodeLine{110         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (operacion == \textcolor{stringliteral}{"{}plazas\_libres"{}} or operacion == \textcolor{stringliteral}{"{}pl"{}})  \textcolor{comment}{// la bici pasa de estar en su estacion actual, a la estacion destino}}
+\DoxyCodeLine{111         \{}
+\DoxyCodeLine{112             cout << \textcolor{stringliteral}{"{}\#pl"{}} << endl;}
+\DoxyCodeLine{113             cout << estaciones.\mbox{\hyperlink{classEstaciones_aa415e6162b78a26df110962dbc109156}{plazas\_libres}}() << endl;}
+\DoxyCodeLine{114         \}}
+\DoxyCodeLine{115         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (operacion == \textcolor{stringliteral}{"{}subir\_bicis"{}} or operacion == \textcolor{stringliteral}{"{}sb"{}})  \textcolor{comment}{// la bici pasa de estar en su estacion actual, a la estacion destino}}
+\DoxyCodeLine{116         \{}
+\DoxyCodeLine{117             cout << \textcolor{stringliteral}{"{}\#sb"{}} << endl;}
+\DoxyCodeLine{118             estaciones.\mbox{\hyperlink{classEstaciones_ad67e1da3d8b1257541017c1ffb308a24}{subir\_bicis}}(bicicletas);}
+\DoxyCodeLine{119         \}}
+\DoxyCodeLine{120         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (operacion == \textcolor{stringliteral}{"{}asignar\_estacion"{}} or operacion == \textcolor{stringliteral}{"{}ae"{}}) \textcolor{comment}{//se a�ade una bici a la estacion mas vacia}}
+\DoxyCodeLine{121         \{}
+\DoxyCodeLine{122             \textcolor{keywordtype}{string} identificador\_bici;}
+\DoxyCodeLine{123             cin >> identificador\_bici;}
+\DoxyCodeLine{124             cout << \textcolor{stringliteral}{"{}\#ae "{}} << identificador\_bici << endl;}
+\DoxyCodeLine{125             \textcolor{keywordflow}{if} (bicicletas.\mbox{\hyperlink{classBicicletas_aa2b8750bde6b19e499c2accba9efac79}{bici\_existe}}(identificador\_bici)) cout << \textcolor{stringliteral}{"{}error: la bici ya existe"{}} << endl;}
+\DoxyCodeLine{126             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (!estaciones.\mbox{\hyperlink{classEstaciones_aa415e6162b78a26df110962dbc109156}{plazas\_libres}}()) cout << \textcolor{stringliteral}{"{}error: no hay plazas libres"{}} << endl;}
+\DoxyCodeLine{127             \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{128                 \textcolor{keywordtype}{string} estacion\_asignada = estaciones.\mbox{\hyperlink{classEstaciones_ab31357512d4727dd1506adacb7d05e04}{asignar\_estacion}}(identificador\_bici);}
+\DoxyCodeLine{129                 bicicletas.\mbox{\hyperlink{classBicicletas_a01b66c690dca4514bf40b892097f569d}{alta\_bici}}(identificador\_bici, estacion\_asignada);}
+\DoxyCodeLine{130                 cout << estacion\_asignada << endl;}
+\DoxyCodeLine{131             \}}
+\DoxyCodeLine{132         \}}
+\DoxyCodeLine{133         cin >> operacion;}
+\DoxyCodeLine{134     \}}
+\DoxyCodeLine{135 \}}
+
+\end{DoxyCode}

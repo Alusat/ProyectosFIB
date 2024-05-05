@@ -1,0 +1,313 @@
+\hypertarget{classEstacion}{}\doxysection{Referencia de la Clase Estacion}
+\label{classEstacion}\index{Estacion@{Estacion}}
+
+
+Representa el conjunto de caracter韘ticas y operaciones de una estaci髇.  
+
+
+
+
+{\ttfamily \#include $<$Estacion.\+hh$>$}
+
+\doxysubsection*{M茅todos p煤blicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEstacion_a7adfb32ddcddb6d07580c471d82ddc45}{Estacion}} (int \mbox{\hyperlink{classEstacion_a351ad2f442f019f0d758b49579191d11}{size}})
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classEstacion_acf10eef443ddc0dce8f10aa3a86fa6da}{n\+\_\+bicis}} ()
+\begin{DoxyCompactList}\small\item\em Consultora que indica el numero de bicis que tiene una estacion. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classEstacion_a3d0268703c38299ca5138d017aff9242}{tamano}} ()
+\begin{DoxyCompactList}\small\item\em Consultora que indica el tama駉 de la estacion. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classEstacion_ab7c646cd257ba6d69467e8a785700849}{bici\+\_\+menor\+\_\+id}} ()
+\begin{DoxyCompactList}\small\item\em Consultora que retorna la bicicleta con menor id. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEstacion_af17812999c18e594d37dea5028fa49b3}{meter\+\_\+bicicleta}} (string identifiacdor\+\_\+bici)
+\begin{DoxyCompactList}\small\item\em A馻de una bici (su id) a la estacion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEstacion_a16a3a70cc4506d87f0dee3cf544e2b68}{modifica\+\_\+capacidad}} (const int \&x)
+\begin{DoxyCompactList}\small\item\em Modifica la capacidad maixma de la estacion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEstacion_a9f84f1605a99773d55956c8b4670d3f9}{eliminar}} (string identificador\+\_\+bici)
+\begin{DoxyCompactList}\small\item\em Elimina una bicicleta de la estacion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEstacion_aa3d1677e87ac28e8798f66593fa1c592}{escribe\+\_\+bicis}} ()
+\begin{DoxyCompactList}\small\item\em Escribi las bicicletas que contiene una estacion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classEstacion_a351ad2f442f019f0d758b49579191d11}{size}}
+\begin{DoxyCompactList}\small\item\em Indice de tama駉 \end{DoxyCompactList}\item 
+set$<$ string $>$ \mbox{\hyperlink{classEstacion_ab79455cfd8dc582b1a5e298c2fe3e237}{bicicletas}}
+\begin{DoxyCompactList}\small\item\em Set de bicicletas que contiene la estacion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripci贸n detallada}
+Representa el conjunto de caracter韘ticas y operaciones de una estaci髇. 
+
+Ofrece una operacion de escritura. 
+
+Definici贸n en la l铆nea 25 del archivo Estacion.\+hh.
+
+
+
+\doxysubsection{Documentaci贸n del constructor y destructor}
+\mbox{\Hypertarget{classEstacion_a7adfb32ddcddb6d07580c471d82ddc45}\label{classEstacion_a7adfb32ddcddb6d07580c471d82ddc45}} 
+\index{Estacion@{Estacion}!Estacion@{Estacion}}
+\index{Estacion@{Estacion}!Estacion@{Estacion}}
+\doxysubsubsection{\texorpdfstring{Estacion()}{Estacion()}}
+{\footnotesize\ttfamily Estacion\+::\+Estacion (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. 
+
+\begin{DoxyPrecond}{Precondici贸n}
+Cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondici贸n}
+El resultado es una estaci髇 sin bicicletas, pero con su identifador y capacidad 
+\end{DoxyPostcond}
+
+
+Definici贸n en la l铆nea 7 del archivo Estacion.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{7                         \{}
+\DoxyCodeLine{8    \mbox{\hyperlink{classEstacion_a351ad2f442f019f0d758b49579191d11}{size}} = s;}
+\DoxyCodeLine{9     set<string> b;}
+\DoxyCodeLine{10      \mbox{\hyperlink{classEstacion_ab79455cfd8dc582b1a5e298c2fe3e237}{bicicletas}} = b;}
+\DoxyCodeLine{11 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentaci贸n de las funciones miembro}
+\mbox{\Hypertarget{classEstacion_ab7c646cd257ba6d69467e8a785700849}\label{classEstacion_ab7c646cd257ba6d69467e8a785700849}} 
+\index{Estacion@{Estacion}!bici\_menor\_id@{bici\_menor\_id}}
+\index{bici\_menor\_id@{bici\_menor\_id}!Estacion@{Estacion}}
+\doxysubsubsection{\texorpdfstring{bici\_menor\_id()}{bici\_menor\_id()}}
+{\footnotesize\ttfamily string Estacion\+::bici\+\_\+menor\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Consultora que retorna la bicicleta con menor id. 
+
+\begin{DoxyPrecond}{Precondici贸n}
+Cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondici贸n}
+Retorna el id de la bicicleta de la estacion con menor id 
+\end{DoxyPostcond}
+
+
+Definici贸n en la l铆nea 39 del archivo Estacion.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{40 \{}
+\DoxyCodeLine{41     \textcolor{keyword}{auto} it = \mbox{\hyperlink{classEstacion_ab79455cfd8dc582b1a5e298c2fe3e237}{bicicletas}}.begin();}
+\DoxyCodeLine{42     \textcolor{keywordtype}{string} no\_valor\_por\_referencia = *it;}
+\DoxyCodeLine{43     \textcolor{keywordflow}{return} no\_valor\_por\_referencia;}
+\DoxyCodeLine{44 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classEstacion_a9f84f1605a99773d55956c8b4670d3f9}\label{classEstacion_a9f84f1605a99773d55956c8b4670d3f9}} 
+\index{Estacion@{Estacion}!eliminar@{eliminar}}
+\index{eliminar@{eliminar}!Estacion@{Estacion}}
+\doxysubsubsection{\texorpdfstring{eliminar()}{eliminar()}}
+{\footnotesize\ttfamily void Estacion\+::eliminar (\begin{DoxyParamCaption}\item[{string}]{identificador\+\_\+bici }\end{DoxyParamCaption})}
+
+
+
+Elimina una bicicleta de la estacion. 
+
+\begin{DoxyPrecond}{Precondici贸n}
+La bicicleta existe 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondici贸n}
+La bicicleta queda eliminada de la estacion 
+\end{DoxyPostcond}
+
+
+Definici贸n en la l铆nea 24 del archivo Estacion.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{24                                                  \{}
+\DoxyCodeLine{25     \mbox{\hyperlink{classEstacion_ab79455cfd8dc582b1a5e298c2fe3e237}{bicicletas}}.erase(identificador\_bici);}
+\DoxyCodeLine{26 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classEstacion_aa3d1677e87ac28e8798f66593fa1c592}\label{classEstacion_aa3d1677e87ac28e8798f66593fa1c592}} 
+\index{Estacion@{Estacion}!escribe\_bicis@{escribe\_bicis}}
+\index{escribe\_bicis@{escribe\_bicis}!Estacion@{Estacion}}
+\doxysubsubsection{\texorpdfstring{escribe\_bicis()}{escribe\_bicis()}}
+{\footnotesize\ttfamily void Estacion\+::escribe\+\_\+bicis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Escribi las bicicletas que contiene una estacion. 
+
+\begin{DoxyPrecond}{Precondici贸n}
+Cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondici贸n}
+Quedan escrito por pantalla las bicicletas en el formato\+: \mbox{\hyperlink{classBicicleta}{Bicicleta}}, salto de l韓ea, bicicleta, salto de l韓ea... 
+\end{DoxyPostcond}
+
+
+Definici贸n en la l铆nea 47 del archivo Estacion.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{47                              \{}
+\DoxyCodeLine{48     set<string>::iterator it = \mbox{\hyperlink{classEstacion_ab79455cfd8dc582b1a5e298c2fe3e237}{bicicletas}}.begin();}
+\DoxyCodeLine{49     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{classEstacion_ab79455cfd8dc582b1a5e298c2fe3e237}{bicicletas}}.size(); ++i) \{}
+\DoxyCodeLine{50         cout << *it << endl;}
+\DoxyCodeLine{51         ++it;}
+\DoxyCodeLine{52     \}}
+\DoxyCodeLine{53 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classEstacion_af17812999c18e594d37dea5028fa49b3}\label{classEstacion_af17812999c18e594d37dea5028fa49b3}} 
+\index{Estacion@{Estacion}!meter\_bicicleta@{meter\_bicicleta}}
+\index{meter\_bicicleta@{meter\_bicicleta}!Estacion@{Estacion}}
+\doxysubsubsection{\texorpdfstring{meter\_bicicleta()}{meter\_bicicleta()}}
+{\footnotesize\ttfamily void Estacion\+::meter\+\_\+bicicleta (\begin{DoxyParamCaption}\item[{string}]{identifiacdor\+\_\+bici }\end{DoxyParamCaption})}
+
+
+
+A馻de una bici (su id) a la estacion. 
+
+\begin{DoxyPrecond}{Precondici贸n}
+hay suficiente espaio para que quepa la bicicleta 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondici贸n}
+Se ha a馻dido el id de la bicicleta a la estacion en el set que las almacena 
+\end{DoxyPostcond}
+
+
+Definici贸n en la l铆nea 19 del archivo Estacion.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{19                                                         \{ }
+\DoxyCodeLine{20     \mbox{\hyperlink{classEstacion_ab79455cfd8dc582b1a5e298c2fe3e237}{bicicletas}}.insert(identificador\_bici);}
+\DoxyCodeLine{21 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classEstacion_a16a3a70cc4506d87f0dee3cf544e2b68}\label{classEstacion_a16a3a70cc4506d87f0dee3cf544e2b68}} 
+\index{Estacion@{Estacion}!modifica\_capacidad@{modifica\_capacidad}}
+\index{modifica\_capacidad@{modifica\_capacidad}!Estacion@{Estacion}}
+\doxysubsubsection{\texorpdfstring{modifica\_capacidad()}{modifica\_capacidad()}}
+{\footnotesize\ttfamily void Estacion\+::modifica\+\_\+capacidad (\begin{DoxyParamCaption}\item[{const int \&}]{x }\end{DoxyParamCaption})}
+
+
+
+Modifica la capacidad maixma de la estacion. 
+
+\begin{DoxyPrecond}{Precondici贸n}
+La nueva capacidad es menor o igual al numero de bicicletas que se encuentran en la estacion 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondici贸n}
+Se ha modificado la capacidad 
+\end{DoxyPostcond}
+
+
+Definici贸n en la l铆nea 29 del archivo Estacion.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{29                                               \{}
+\DoxyCodeLine{30     \mbox{\hyperlink{classEstacion_a351ad2f442f019f0d758b49579191d11}{size}} = x;}
+\DoxyCodeLine{31 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classEstacion_acf10eef443ddc0dce8f10aa3a86fa6da}\label{classEstacion_acf10eef443ddc0dce8f10aa3a86fa6da}} 
+\index{Estacion@{Estacion}!n\_bicis@{n\_bicis}}
+\index{n\_bicis@{n\_bicis}!Estacion@{Estacion}}
+\doxysubsubsection{\texorpdfstring{n\_bicis()}{n\_bicis()}}
+{\footnotesize\ttfamily int Estacion\+::n\+\_\+bicis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Consultora que indica el numero de bicis que tiene una estacion. 
+
+\begin{DoxyPrecond}{Precondici贸n}
+Cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondici贸n}
+Retorna el numero de bicis que tiene la estacion 
+\end{DoxyPostcond}
+
+
+Definici贸n en la l铆nea 14 del archivo Estacion.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{14                       \{}
+\DoxyCodeLine{15     \textcolor{keywordflow}{return} \mbox{\hyperlink{classEstacion_ab79455cfd8dc582b1a5e298c2fe3e237}{bicicletas}}.size();}
+\DoxyCodeLine{16 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classEstacion_a3d0268703c38299ca5138d017aff9242}\label{classEstacion_a3d0268703c38299ca5138d017aff9242}} 
+\index{Estacion@{Estacion}!tamano@{tamano}}
+\index{tamano@{tamano}!Estacion@{Estacion}}
+\doxysubsubsection{\texorpdfstring{tamano()}{tamano()}}
+{\footnotesize\ttfamily int Estacion\+::tamano (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Consultora que indica el tama駉 de la estacion. 
+
+\begin{DoxyPrecond}{Precondici贸n}
+Cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondici贸n}
+Retorna el tama駉 de la estacion 
+\end{DoxyPostcond}
+
+
+Definici贸n en la l铆nea 34 del archivo Estacion.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{34                      \{}
+\DoxyCodeLine{35     \textcolor{keywordflow}{return} \mbox{\hyperlink{classEstacion_a351ad2f442f019f0d758b49579191d11}{size}};}
+\DoxyCodeLine{36 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentaci贸n de los datos miembro}
+\mbox{\Hypertarget{classEstacion_ab79455cfd8dc582b1a5e298c2fe3e237}\label{classEstacion_ab79455cfd8dc582b1a5e298c2fe3e237}} 
+\index{Estacion@{Estacion}!bicicletas@{bicicletas}}
+\index{bicicletas@{bicicletas}!Estacion@{Estacion}}
+\doxysubsubsection{\texorpdfstring{bicicletas}{bicicletas}}
+{\footnotesize\ttfamily set$<$string$>$ Estacion\+::bicicletas\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Set de bicicletas que contiene la estacion. 
+
+
+
+Definici贸n en la l铆nea 31 del archivo Estacion.\+hh.
+
+\mbox{\Hypertarget{classEstacion_a351ad2f442f019f0d758b49579191d11}\label{classEstacion_a351ad2f442f019f0d758b49579191d11}} 
+\index{Estacion@{Estacion}!size@{size}}
+\index{size@{size}!Estacion@{Estacion}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily int Estacion\+::size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Indice de tama駉 
+
+
+
+Definici贸n en la l铆nea 29 del archivo Estacion.\+hh.
+
+
+
+La documentaci贸n para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Estacion_8hh}{Estacion.\+hh}}\item 
+\mbox{\hyperlink{Estacion_8cc}{Estacion.\+cc}}\end{DoxyCompactItemize}

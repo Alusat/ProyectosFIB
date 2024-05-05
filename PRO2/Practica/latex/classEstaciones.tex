@@ -1,0 +1,602 @@
+\hypertarget{classEstaciones}{}\doxysection{Referencia de la Clase Estaciones}
+\label{classEstaciones}\index{Estaciones@{Estaciones}}
+
+
+Representa el conjunto de características y operaciones del conjunto de estaciones.  
+
+
+
+
+{\ttfamily \#include $<$Estaciones.\+hh$>$}
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEstaciones_aa8f295c980371f817ac97d17d656af01}{Estaciones}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classEstaciones_a03e9465a72ed024c7402a27e50bf35d5}{estacion\+\_\+existe}} (string identificador\+\_\+estacion)
+\begin{DoxyCompactList}\small\item\em Consultora que indica si existe una estacion. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEstacion}{Estacion}} \& \mbox{\hyperlink{classEstaciones_ac3fc0f143e7f71404e66059c9127fbc8}{estacion}} (string identificador\+\_\+estacion)
+\begin{DoxyCompactList}\small\item\em Consultora que retorna una estacion. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classEstaciones_aa415e6162b78a26df110962dbc109156}{plazas\+\_\+libres}} ()
+\begin{DoxyCompactList}\small\item\em Escribe el numero de plazas disponibles. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEstaciones_a394cf68aaed821aa6c08d7995f8a6124}{alta\+\_\+bici}} (string \&identificador\+\_\+estacion, string \&identificador\+\_\+bicicleta)
+\begin{DoxyCompactList}\small\item\em Añade una bicicleta al conjunto de estaciones en una estacion en concreto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEstaciones_a720046e24c44bdbf0570ce03d8e82988}{baja\+\_\+bici}} (string \&identificador\+\_\+estacion, string \&identficador\+\_\+bicicleta)
+\begin{DoxyCompactList}\small\item\em Elimina una bicicleta de su estacion actual, y por tanto del conjunto de estaciones. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEstaciones_a76dce4f1eef556fbbb88df2743115d03}{mover}} (string \&identificador\+\_\+bici, string \&identificador\+\_\+estacion, string \&identificador\+\_\+estacion\+\_\+actual)
+\begin{DoxyCompactList}\small\item\em Mueve una bicicleta de una estacion existente a otra. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEstaciones_ac532bf089c506f49abc127173fd97c98}{modificar\+\_\+capacidad}} (const string \&identificador\+\_\+estacion, const int \&x)
+\begin{DoxyCompactList}\small\item\em Modifica la capacidad de una estacion. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classEstaciones_ab31357512d4727dd1506adacb7d05e04}{asignar\+\_\+estacion}} (string \&identificador\+\_\+bicicleta)
+\begin{DoxyCompactList}\small\item\em Se identifica la estacion con mayor coeficiete de desocupacion general y se retorna su id. La bicicleta queda asignada a esa estacion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEstaciones_ad67e1da3d8b1257541017c1ffb308a24}{subir\+\_\+bicis}} (\mbox{\hyperlink{classBicicletas}{Bicicletas}} \&bicicletas)
+\begin{DoxyCompactList}\small\item\em Acerca bicis a la primera estacion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEstaciones_a5be92d8bf78e59056818d9336f4e4fc2}{leer\+\_\+bicicletas}} ()
+\begin{DoxyCompactList}\small\item\em Lee un cojunto de estaciones. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classEstaciones_af8a96ab51af33a65afc59aa6294ec7ef}{leer\+\_\+arbol}} (Bin\+Tree$<$ string $>$ \&\mbox{\hyperlink{classEstaciones_a2e761ab1f06ecce6d1f401b201fb2b68}{arbol\+\_\+estaciones}}, map$<$ string, \mbox{\hyperlink{classEstacion}{Estacion}} $>$ \&\mbox{\hyperlink{classEstaciones_a482f87c359c32a714b2ab313ba12f554}{id\+\_\+estaciones\+\_\+estacion}}, int \&\mbox{\hyperlink{classEstaciones_af8f40f86cd7e5f556bc4af5f45863009}{plazas}})
+\item 
+void \mbox{\hyperlink{classEstaciones_ae3c447270cb98582328f448649f3e4da}{subir}} (const Bin\+Tree$<$ string $>$ \&arbol, \mbox{\hyperlink{classBicicletas}{Bicicletas}} \&bicicletas)
+\begin{DoxyCompactList}\small\item\em Función auxiliar. Justificación en el documento de \textquotesingle{}Justificación de operaciones de la práctica de PRO2, Otoño 2023\textquotesingle{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEstaciones_a42eae0faee509b86d9c82b9c921e082a}{asignar}} (const Bin\+Tree$<$ string $>$ \&arbol, int \&estaciones\+\_\+actuales, int \&plazas\+\_\+sin\+\_\+usar, double \&coef\+\_\+max, string \&estacion\+\_\+actual)
+\begin{DoxyCompactList}\small\item\em Justificación de todos los bucles en el documento de \textquotesingle{}Justificación de operaciones de la práctica de PRO2, Otoño 2023\textquotesingle{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+Bin\+Tree$<$ string $>$ \mbox{\hyperlink{classEstaciones_a2e761ab1f06ecce6d1f401b201fb2b68}{arbol\+\_\+estaciones}}
+\begin{DoxyCompactList}\small\item\em Arbol de ids de estaciones. \end{DoxyCompactList}\item 
+map$<$ string, \mbox{\hyperlink{classEstacion}{Estacion}} $>$ \mbox{\hyperlink{classEstaciones_a482f87c359c32a714b2ab313ba12f554}{id\+\_\+estaciones\+\_\+estacion}}
+\begin{DoxyCompactList}\small\item\em Mapa con todas las id de las estaciones y su respectiva \mbox{\hyperlink{classEstacion}{Estacion}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classEstaciones_af8f40f86cd7e5f556bc4af5f45863009}{plazas}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Representa el conjunto de características y operaciones del conjunto de estaciones. 
+
+Ofrece una operacion de lectura. 
+
+Definición en la línea 27 del archivo Estaciones.\+hh.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classEstaciones_aa8f295c980371f817ac97d17d656af01}\label{classEstaciones_aa8f295c980371f817ac97d17d656af01}} 
+\index{Estaciones@{Estaciones}!Estaciones@{Estaciones}}
+\index{Estaciones@{Estaciones}!Estaciones@{Estaciones}}
+\doxysubsubsection{\texorpdfstring{Estaciones()}{Estaciones()}}
+{\footnotesize\ttfamily Estaciones\+::\+Estaciones (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. 
+
+\begin{DoxyPrecond}{Precondición}
+Cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es un arbol de estaciones vacias (sin bicicletas) 
+\end{DoxyPostcond}
+
+
+Definición en la línea 7 del archivo Estaciones.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{8 \{}
+\DoxyCodeLine{9     \mbox{\hyperlink{classEstaciones_af8f40f86cd7e5f556bc4af5f45863009}{plazas}} = 0;}
+\DoxyCodeLine{10     map<string, Estacion> m;}
+\DoxyCodeLine{11     \mbox{\hyperlink{classEstaciones_a482f87c359c32a714b2ab313ba12f554}{id\_estaciones\_estacion}} = m;}
+\DoxyCodeLine{12     BinTree<string> b;}
+\DoxyCodeLine{13     \mbox{\hyperlink{classEstaciones_a2e761ab1f06ecce6d1f401b201fb2b68}{arbol\_estaciones}} = b;}
+\DoxyCodeLine{14 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classEstaciones_a394cf68aaed821aa6c08d7995f8a6124}\label{classEstaciones_a394cf68aaed821aa6c08d7995f8a6124}} 
+\index{Estaciones@{Estaciones}!alta\_bici@{alta\_bici}}
+\index{alta\_bici@{alta\_bici}!Estaciones@{Estaciones}}
+\doxysubsubsection{\texorpdfstring{alta\_bici()}{alta\_bici()}}
+{\footnotesize\ttfamily void Estaciones\+::alta\+\_\+bici (\begin{DoxyParamCaption}\item[{string \&}]{identificador\+\_\+estacion,  }\item[{string \&}]{identificador\+\_\+bicicleta }\end{DoxyParamCaption})}
+
+
+
+Añade una bicicleta al conjunto de estaciones en una estacion en concreto. 
+
+\begin{DoxyPrecond}{Precondición}
+La bicicleta no existe, la estacion existe, la bicicleta cabe en la estacion 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La bicicleta queda añadida a la estacion. Se reduce en 1 el numero de plazas disponibles globales 
+\end{DoxyPostcond}
+
+
+Definición en la línea 19 del archivo Estaciones.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{19                                                                                           \{}
+\DoxyCodeLine{20     \textcolor{keyword}{auto} it = \mbox{\hyperlink{classEstaciones_a482f87c359c32a714b2ab313ba12f554}{id\_estaciones\_estacion}}.find(identificador\_estacion);}
+\DoxyCodeLine{21     it-\/>second.meter\_bicicleta(identificador\_bicicleta);}
+\DoxyCodeLine{22     -\/-\/\mbox{\hyperlink{classEstaciones_af8f40f86cd7e5f556bc4af5f45863009}{plazas}};}
+\DoxyCodeLine{23 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classEstaciones_a42eae0faee509b86d9c82b9c921e082a}\label{classEstaciones_a42eae0faee509b86d9c82b9c921e082a}} 
+\index{Estaciones@{Estaciones}!asignar@{asignar}}
+\index{asignar@{asignar}!Estaciones@{Estaciones}}
+\doxysubsubsection{\texorpdfstring{asignar()}{asignar()}}
+{\footnotesize\ttfamily void Estaciones\+::asignar (\begin{DoxyParamCaption}\item[{const Bin\+Tree$<$ string $>$ \&}]{arbol,  }\item[{int \&}]{estaciones\+\_\+actuales,  }\item[{int \&}]{plazas\+\_\+sin\+\_\+usar,  }\item[{double \&}]{coef\+\_\+max,  }\item[{string \&}]{estacion\+\_\+actual }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Justificación de todos los bucles en el documento de \textquotesingle{}Justificación de operaciones de la práctica de PRO2, Otoño 2023\textquotesingle{}. 
+
+
+
+Definición en la línea 130 del archivo Estaciones.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{131 \{}
+\DoxyCodeLine{132     \textcolor{keywordtype}{double} coef\_act;}
+\DoxyCodeLine{133     \textcolor{keywordflow}{if} (arbol.left().empty()) \textcolor{comment}{//estamos en hoja}}
+\DoxyCodeLine{134     \{}
+\DoxyCodeLine{135         \textcolor{keywordtype}{string} value = arbol.value();}
+\DoxyCodeLine{136         n\_estaciones\_actuales = 1;}
+\DoxyCodeLine{137         \textcolor{keyword}{auto} it = \mbox{\hyperlink{classEstaciones_a482f87c359c32a714b2ab313ba12f554}{id\_estaciones\_estacion}}.find(value);}
+\DoxyCodeLine{138         plazas\_sin\_usar = it-\/>second.tamano() -\/ it-\/>second.n\_bicis();}
+\DoxyCodeLine{139         coef\_act = double(plazas\_sin\_usar) / double(n\_estaciones\_actuales);}
+\DoxyCodeLine{140         \textcolor{keywordflow}{if} (coef\_act == coef\_max) \{}
+\DoxyCodeLine{141             \textcolor{keywordflow}{if} (value < estacion\_actual) estacion\_actual = value;}
+\DoxyCodeLine{142         \}}
+\DoxyCodeLine{143         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (coef\_act > coef\_max) \{}
+\DoxyCodeLine{144             coef\_max = coef\_act;}
+\DoxyCodeLine{145             estacion\_actual = value;}
+\DoxyCodeLine{146         \}}
+\DoxyCodeLine{147     \}}
+\DoxyCodeLine{148     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{149         \textcolor{keywordtype}{string} value = arbol.value();}
+\DoxyCodeLine{150         \textcolor{keyword}{auto} it = \mbox{\hyperlink{classEstaciones_a482f87c359c32a714b2ab313ba12f554}{id\_estaciones\_estacion}}.find(value);}
+\DoxyCodeLine{151         \textcolor{keywordtype}{int} plazas\_sin\_usar\_izq, n\_estaciones\_actuales\_izquierda;}
+\DoxyCodeLine{152         \mbox{\hyperlink{classEstaciones_a42eae0faee509b86d9c82b9c921e082a}{asignar}}(arbol.left(), n\_estaciones\_actuales\_izquierda, plazas\_sin\_usar\_izq, coef\_max, estacion\_actual);}
+\DoxyCodeLine{153         \textcolor{keywordtype}{int} plazas\_sin\_usar\_der, n\_estaciones\_actuales\_derecha;}
+\DoxyCodeLine{154         \mbox{\hyperlink{classEstaciones_a42eae0faee509b86d9c82b9c921e082a}{asignar}}(arbol.right(), n\_estaciones\_actuales\_derecha, plazas\_sin\_usar\_der, coef\_max, estacion\_actual);}
+\DoxyCodeLine{155         plazas\_sin\_usar = plazas\_sin\_usar\_izq + plazas\_sin\_usar\_der + (it-\/>second.tamano() -\/ it-\/>second.n\_bicis());}
+\DoxyCodeLine{156         n\_estaciones\_actuales = n\_estaciones\_actuales\_izquierda + n\_estaciones\_actuales\_derecha + 1;}
+\DoxyCodeLine{157         coef\_act = double(plazas\_sin\_usar) / double(n\_estaciones\_actuales);}
+\DoxyCodeLine{158         \textcolor{keywordflow}{if} (coef\_act == coef\_max) \{}
+\DoxyCodeLine{159             \textcolor{keywordflow}{if} (value < estacion\_actual) estacion\_actual = value;}
+\DoxyCodeLine{160         \}}
+\DoxyCodeLine{161         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (coef\_act > coef\_max) \{}
+\DoxyCodeLine{162             coef\_max = coef\_act;}
+\DoxyCodeLine{163             estacion\_actual = value;}
+\DoxyCodeLine{164         \}}
+\DoxyCodeLine{165     \}}
+\DoxyCodeLine{166 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classEstaciones_ab31357512d4727dd1506adacb7d05e04}\label{classEstaciones_ab31357512d4727dd1506adacb7d05e04}} 
+\index{Estaciones@{Estaciones}!asignar\_estacion@{asignar\_estacion}}
+\index{asignar\_estacion@{asignar\_estacion}!Estaciones@{Estaciones}}
+\doxysubsubsection{\texorpdfstring{asignar\_estacion()}{asignar\_estacion()}}
+{\footnotesize\ttfamily string Estaciones\+::asignar\+\_\+estacion (\begin{DoxyParamCaption}\item[{string \&}]{identificador\+\_\+bicicleta }\end{DoxyParamCaption})}
+
+
+
+Se identifica la estacion con mayor coeficiete de desocupacion general y se retorna su id. La bicicleta queda asignada a esa estacion. 
+
+\begin{DoxyPrecond}{Precondición}
+Hay una plaza libre como mínimo 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha identificado la estacion con mayor coeficiente de desocupacion general y se ha retornado su id. La bici ha quedado asignada a la estacion con mayor coeficient de desocupacion general. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 118 del archivo Estaciones.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{119 \{}
+\DoxyCodeLine{120     \textcolor{keywordtype}{double} coef\_max;}
+\DoxyCodeLine{121     \textcolor{keywordtype}{int} n\_estaciones\_actuales, plazas\_sin\_usar;}
+\DoxyCodeLine{122     coef\_max = -\/1; \textcolor{comment}{//siempre se cambiara por otra mas peque�a ya que no puede ser mayor que 1 normalmente}}
+\DoxyCodeLine{123     \textcolor{keywordtype}{string} estacion\_actual;}
+\DoxyCodeLine{124     \mbox{\hyperlink{classEstaciones_a42eae0faee509b86d9c82b9c921e082a}{asignar}}(\mbox{\hyperlink{classEstaciones_a2e761ab1f06ecce6d1f401b201fb2b68}{arbol\_estaciones}}, n\_estaciones\_actuales, plazas\_sin\_usar, coef\_max, estacion\_actual);}
+\DoxyCodeLine{125     \mbox{\hyperlink{classEstaciones_a394cf68aaed821aa6c08d7995f8a6124}{alta\_bici}}(estacion\_actual, identificador\_bicicleta);}
+\DoxyCodeLine{126     \textcolor{keywordflow}{return} estacion\_actual;}
+\DoxyCodeLine{127 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classEstaciones_a720046e24c44bdbf0570ce03d8e82988}\label{classEstaciones_a720046e24c44bdbf0570ce03d8e82988}} 
+\index{Estaciones@{Estaciones}!baja\_bici@{baja\_bici}}
+\index{baja\_bici@{baja\_bici}!Estaciones@{Estaciones}}
+\doxysubsubsection{\texorpdfstring{baja\_bici()}{baja\_bici()}}
+{\footnotesize\ttfamily void Estaciones\+::baja\+\_\+bici (\begin{DoxyParamCaption}\item[{string \&}]{identificador\+\_\+estacion,  }\item[{string \&}]{identficador\+\_\+bicicleta }\end{DoxyParamCaption})}
+
+
+
+Elimina una bicicleta de su estacion actual, y por tanto del conjunto de estaciones. 
+
+\begin{DoxyPrecond}{Precondición}
+La bicicleta existe 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La bicicleta queda eliminada de la estacion en la que ese encuentra, y por tanto del connjunto de estaicones. Se reduce en 1 el numero de plazas disponibles globales. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 26 del archivo Estaciones.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{27 \{}
+\DoxyCodeLine{28     \textcolor{keyword}{auto} it = \mbox{\hyperlink{classEstaciones_a482f87c359c32a714b2ab313ba12f554}{id\_estaciones\_estacion}}.find(identificador\_estacion);}
+\DoxyCodeLine{29     it-\/>second.eliminar(identficador\_bicicleta);}
+\DoxyCodeLine{30     ++\mbox{\hyperlink{classEstaciones_af8f40f86cd7e5f556bc4af5f45863009}{plazas}};}
+\DoxyCodeLine{31 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classEstaciones_ac3fc0f143e7f71404e66059c9127fbc8}\label{classEstaciones_ac3fc0f143e7f71404e66059c9127fbc8}} 
+\index{Estaciones@{Estaciones}!estacion@{estacion}}
+\index{estacion@{estacion}!Estaciones@{Estaciones}}
+\doxysubsubsection{\texorpdfstring{estacion()}{estacion()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEstacion}{Estacion}} \& Estaciones\+::estacion (\begin{DoxyParamCaption}\item[{string}]{identificador\+\_\+estacion }\end{DoxyParamCaption})}
+
+
+
+Consultora que retorna una estacion. 
+
+\begin{DoxyPrecond}{Precondición}
+La estacion a retornar existe 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retorna la estacion a la qual se refiere la id 
+\end{DoxyPostcond}
+
+
+Definición en la línea 175 del archivo Estaciones.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{176 \{}
+\DoxyCodeLine{177     \textcolor{keyword}{auto} it = \mbox{\hyperlink{classEstaciones_a482f87c359c32a714b2ab313ba12f554}{id\_estaciones\_estacion}}.find(identificador\_estacion);}
+\DoxyCodeLine{178     \textcolor{keywordflow}{return} it-\/>second;}
+\DoxyCodeLine{179 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classEstaciones_a03e9465a72ed024c7402a27e50bf35d5}\label{classEstaciones_a03e9465a72ed024c7402a27e50bf35d5}} 
+\index{Estaciones@{Estaciones}!estacion\_existe@{estacion\_existe}}
+\index{estacion\_existe@{estacion\_existe}!Estaciones@{Estaciones}}
+\doxysubsubsection{\texorpdfstring{estacion\_existe()}{estacion\_existe()}}
+{\footnotesize\ttfamily bool Estaciones\+::estacion\+\_\+existe (\begin{DoxyParamCaption}\item[{string}]{identificador\+\_\+estacion }\end{DoxyParamCaption})}
+
+
+
+Consultora que indica si existe una estacion. 
+
+\begin{DoxyPrecond}{Precondición}
+Cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retorna true si existe la estacion, false en caso contrario 
+\end{DoxyPostcond}
+
+
+Definición en la línea 169 del archivo Estaciones.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{170 \{}
+\DoxyCodeLine{171     \textcolor{keyword}{auto} it = \mbox{\hyperlink{classEstaciones_a482f87c359c32a714b2ab313ba12f554}{id\_estaciones\_estacion}}.find(identificador\_estacion);}
+\DoxyCodeLine{172     \textcolor{keywordflow}{return} (it != \mbox{\hyperlink{classEstaciones_a482f87c359c32a714b2ab313ba12f554}{id\_estaciones\_estacion}}.end());}
+\DoxyCodeLine{173 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classEstaciones_af8a96ab51af33a65afc59aa6294ec7ef}\label{classEstaciones_af8a96ab51af33a65afc59aa6294ec7ef}} 
+\index{Estaciones@{Estaciones}!leer\_arbol@{leer\_arbol}}
+\index{leer\_arbol@{leer\_arbol}!Estaciones@{Estaciones}}
+\doxysubsubsection{\texorpdfstring{leer\_arbol()}{leer\_arbol()}}
+{\footnotesize\ttfamily void Estaciones\+::leer\+\_\+arbol (\begin{DoxyParamCaption}\item[{Bin\+Tree$<$ string $>$ \&}]{arbol\+\_\+estaciones,  }\item[{map$<$ string, \mbox{\hyperlink{classEstacion}{Estacion}} $>$ \&}]{id\+\_\+estaciones\+\_\+estacion,  }\item[{int \&}]{plazas }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 186 del archivo Estaciones.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{187 \{}
+\DoxyCodeLine{188     \textcolor{keywordtype}{string} id;}
+\DoxyCodeLine{189     cin >> id;}
+\DoxyCodeLine{190     \textcolor{keywordflow}{if} (\textcolor{keywordtype}{id} != \textcolor{stringliteral}{"{}\#"{}}) \{}
+\DoxyCodeLine{191         \textcolor{keywordtype}{int} size;}
+\DoxyCodeLine{192         cin >> size;}
+\DoxyCodeLine{193         \mbox{\hyperlink{classEstaciones_a482f87c359c32a714b2ab313ba12f554}{id\_estaciones\_estacion}}.insert(pair<string, Estacion>(\textcolor{keywordtype}{id}, \mbox{\hyperlink{classEstacion}{Estacion}}(size)));}
+\DoxyCodeLine{194         \mbox{\hyperlink{classEstaciones_af8f40f86cd7e5f556bc4af5f45863009}{plazas}} += size;}
+\DoxyCodeLine{195         BinTree<string> derecha, izquierda;}
+\DoxyCodeLine{196         \mbox{\hyperlink{classEstaciones_af8a96ab51af33a65afc59aa6294ec7ef}{leer\_arbol}}(izquierda, \mbox{\hyperlink{classEstaciones_a482f87c359c32a714b2ab313ba12f554}{id\_estaciones\_estacion}}, \mbox{\hyperlink{classEstaciones_af8f40f86cd7e5f556bc4af5f45863009}{plazas}});}
+\DoxyCodeLine{197         \mbox{\hyperlink{classEstaciones_af8a96ab51af33a65afc59aa6294ec7ef}{leer\_arbol}}(derecha, \mbox{\hyperlink{classEstaciones_a482f87c359c32a714b2ab313ba12f554}{id\_estaciones\_estacion}}, \mbox{\hyperlink{classEstaciones_af8f40f86cd7e5f556bc4af5f45863009}{plazas}});}
+\DoxyCodeLine{198         \mbox{\hyperlink{classEstaciones_a2e761ab1f06ecce6d1f401b201fb2b68}{arbol\_estaciones}} = BinTree<string>(\textcolor{keywordtype}{id}, izquierda, derecha);}
+\DoxyCodeLine{199     \}}
+\DoxyCodeLine{200 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classEstaciones_a5be92d8bf78e59056818d9336f4e4fc2}\label{classEstaciones_a5be92d8bf78e59056818d9336f4e4fc2}} 
+\index{Estaciones@{Estaciones}!leer\_bicicletas@{leer\_bicicletas}}
+\index{leer\_bicicletas@{leer\_bicicletas}!Estaciones@{Estaciones}}
+\doxysubsubsection{\texorpdfstring{leer\_bicicletas()}{leer\_bicicletas()}}
+{\footnotesize\ttfamily void Estaciones\+::leer\+\_\+bicicletas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Lee un cojunto de estaciones. 
+
+\begin{DoxyPrecond}{Precondición}
+Cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El conjunto de estaciones almacena los datos leidos. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 204 del archivo Estaciones.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{205 \{}
+\DoxyCodeLine{206     \mbox{\hyperlink{classEstaciones_af8a96ab51af33a65afc59aa6294ec7ef}{leer\_arbol}}(\mbox{\hyperlink{classEstaciones_a2e761ab1f06ecce6d1f401b201fb2b68}{arbol\_estaciones}}, \mbox{\hyperlink{classEstaciones_a482f87c359c32a714b2ab313ba12f554}{id\_estaciones\_estacion}}, \mbox{\hyperlink{classEstaciones_af8f40f86cd7e5f556bc4af5f45863009}{plazas}});}
+\DoxyCodeLine{207 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classEstaciones_ac532bf089c506f49abc127173fd97c98}\label{classEstaciones_ac532bf089c506f49abc127173fd97c98}} 
+\index{Estaciones@{Estaciones}!modificar\_capacidad@{modificar\_capacidad}}
+\index{modificar\_capacidad@{modificar\_capacidad}!Estaciones@{Estaciones}}
+\doxysubsubsection{\texorpdfstring{modificar\_capacidad()}{modificar\_capacidad()}}
+{\footnotesize\ttfamily void Estaciones\+::modificar\+\_\+capacidad (\begin{DoxyParamCaption}\item[{const string \&}]{identificador\+\_\+estacion,  }\item[{const int \&}]{x }\end{DoxyParamCaption})}
+
+
+
+Modifica la capacidad de una estacion. 
+
+\begin{DoxyPrecond}{Precondición}
+La estacion existe. El nuemero de bicicletas actuales de la estacion es menor o igual a la nueva capacidad. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La estacion tiene una nueva capacidad. Las plazas libres totales se han actualizado en consecuencia. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 209 del archivo Estaciones.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{210 \{}
+\DoxyCodeLine{211     \textcolor{keywordtype}{int} capacidad\_anterior = \mbox{\hyperlink{classEstaciones_ac3fc0f143e7f71404e66059c9127fbc8}{estacion}}(identificador\_estacion).\mbox{\hyperlink{classEstacion_a3d0268703c38299ca5138d017aff9242}{tamano}}();}
+\DoxyCodeLine{212     \mbox{\hyperlink{classEstaciones_ac3fc0f143e7f71404e66059c9127fbc8}{estacion}}(identificador\_estacion).\mbox{\hyperlink{classEstacion_a16a3a70cc4506d87f0dee3cf544e2b68}{modifica\_capacidad}}(x);}
+\DoxyCodeLine{213     \mbox{\hyperlink{classEstaciones_af8f40f86cd7e5f556bc4af5f45863009}{plazas}} += x -\/ capacidad\_anterior;}
+\DoxyCodeLine{214 }
+\DoxyCodeLine{215 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classEstaciones_a76dce4f1eef556fbbb88df2743115d03}\label{classEstaciones_a76dce4f1eef556fbbb88df2743115d03}} 
+\index{Estaciones@{Estaciones}!mover@{mover}}
+\index{mover@{mover}!Estaciones@{Estaciones}}
+\doxysubsubsection{\texorpdfstring{mover()}{mover()}}
+{\footnotesize\ttfamily void Estaciones\+::mover (\begin{DoxyParamCaption}\item[{string \&}]{identificador\+\_\+bici,  }\item[{string \&}]{identificador\+\_\+estacion,  }\item[{string \&}]{identificador\+\_\+estacion\+\_\+actual }\end{DoxyParamCaption})}
+
+
+
+Mueve una bicicleta de una estacion existente a otra. 
+
+\begin{DoxyPrecond}{Precondición}
+las estaciones y la bicicleta existen. La estacion destino no es la misma en la cual esta la bicicleta 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+La bicicleta queda eliminada de su estacion actual, y pasa a estar en la nueva estacion 
+\end{DoxyPostcond}
+
+
+Definición en la línea 33 del archivo Estaciones.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{34 \{}
+\DoxyCodeLine{35     \textcolor{keyword}{auto} it = \mbox{\hyperlink{classEstaciones_a482f87c359c32a714b2ab313ba12f554}{id\_estaciones\_estacion}}.find(identificador\_estacion);}
+\DoxyCodeLine{36     it-\/>second.meter\_bicicleta(identificador\_bici);}
+\DoxyCodeLine{37     \textcolor{keyword}{auto} iter = \mbox{\hyperlink{classEstaciones_a482f87c359c32a714b2ab313ba12f554}{id\_estaciones\_estacion}}.find(identificador\_estacion\_actual);}
+\DoxyCodeLine{38     iter-\/>second.eliminar(identificador\_bici);}
+\DoxyCodeLine{39 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classEstaciones_aa415e6162b78a26df110962dbc109156}\label{classEstaciones_aa415e6162b78a26df110962dbc109156}} 
+\index{Estaciones@{Estaciones}!plazas\_libres@{plazas\_libres}}
+\index{plazas\_libres@{plazas\_libres}!Estaciones@{Estaciones}}
+\doxysubsubsection{\texorpdfstring{plazas\_libres()}{plazas\_libres()}}
+{\footnotesize\ttfamily int Estaciones\+::plazas\+\_\+libres (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Escribe el numero de plazas disponibles. 
+
+\begin{DoxyPrecond}{Precondición}
+Cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha escrito por pantalla el numero de plazas libres (y salto de linea) 
+\end{DoxyPostcond}
+
+
+Definición en la línea 181 del archivo Estaciones.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{182 \{}
+\DoxyCodeLine{183     \textcolor{keywordflow}{return} \mbox{\hyperlink{classEstaciones_af8f40f86cd7e5f556bc4af5f45863009}{plazas}};}
+\DoxyCodeLine{184 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classEstaciones_ae3c447270cb98582328f448649f3e4da}\label{classEstaciones_ae3c447270cb98582328f448649f3e4da}} 
+\index{Estaciones@{Estaciones}!subir@{subir}}
+\index{subir@{subir}!Estaciones@{Estaciones}}
+\doxysubsubsection{\texorpdfstring{subir()}{subir()}}
+{\footnotesize\ttfamily void Estaciones\+::subir (\begin{DoxyParamCaption}\item[{const Bin\+Tree$<$ string $>$ \&}]{arbol,  }\item[{\mbox{\hyperlink{classBicicletas}{Bicicletas}} \&}]{bicicletas }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Función auxiliar. Justificación en el documento de \textquotesingle{}Justificación de operaciones de la práctica de PRO2, Otoño 2023\textquotesingle{}. 
+
+
+
+Definición en la línea 48 del archivo Estaciones.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{49 \{}
+\DoxyCodeLine{50     \textcolor{keywordflow}{if} (arbol.left().empty()) \{}
+\DoxyCodeLine{51         \textcolor{keywordflow}{return}; \textcolor{comment}{//no hace falta mirar el derecho, si falta el izquierdo no habra derecho}}
+\DoxyCodeLine{52     \}}
+\DoxyCodeLine{53     \textcolor{keywordtype}{string} value = arbol.value();}
+\DoxyCodeLine{54     \textcolor{keywordtype}{string} izq = arbol.left().value();}
+\DoxyCodeLine{55     \textcolor{keywordtype}{string} der = arbol.right().value();}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57     \textcolor{keyword}{auto} itizq = \mbox{\hyperlink{classEstaciones_a482f87c359c32a714b2ab313ba12f554}{id\_estaciones\_estacion}}.find(izq);}
+\DoxyCodeLine{58     \textcolor{keyword}{auto} itder = \mbox{\hyperlink{classEstaciones_a482f87c359c32a714b2ab313ba12f554}{id\_estaciones\_estacion}}.find(der);}
+\DoxyCodeLine{59     \textcolor{keyword}{auto} itvalue = \mbox{\hyperlink{classEstaciones_a482f87c359c32a714b2ab313ba12f554}{id\_estaciones\_estacion}}.find(arbol.value());}
+\DoxyCodeLine{60     \textcolor{keywordflow}{if} ((itvalue-\/>second.tamano() -\/ itvalue-\/>second.n\_bicis()) >= (itizq-\/>second.n\_bicis() + itder-\/>second.n\_bicis())) \{ \textcolor{comment}{//caben todas las bicicletas a subir}}
+\DoxyCodeLine{61         \textcolor{keywordflow}{while} ((itizq-\/>second.n\_bicis() != 0)) \{ \textcolor{comment}{//subir todas las de la izquierda}}
+\DoxyCodeLine{62             bicicletas.\mbox{\hyperlink{classBicicletas_a02d06caac04f8fcd4a4c3a1d1522dab6}{subir}}(itizq-\/>second.bici\_menor\_id(), value);}
+\DoxyCodeLine{63             itvalue-\/>second.meter\_bicicleta(itizq-\/>second.bici\_menor\_id());}
+\DoxyCodeLine{64             itizq-\/>second.eliminar(itizq-\/>second.bici\_menor\_id());}
+\DoxyCodeLine{65         \}}
+\DoxyCodeLine{66         \textcolor{keywordflow}{while} ((itder-\/>second.n\_bicis() != 0)) \{ \textcolor{comment}{//subir todas las de la derecha}}
+\DoxyCodeLine{67             bicicletas.\mbox{\hyperlink{classBicicletas_a02d06caac04f8fcd4a4c3a1d1522dab6}{subir}}(itder-\/>second.bici\_menor\_id(), value);}
+\DoxyCodeLine{68             itvalue-\/>second.meter\_bicicleta(itder-\/>second.bici\_menor\_id());}
+\DoxyCodeLine{69             itder-\/>second.eliminar(itder-\/>second.bici\_menor\_id());}
+\DoxyCodeLine{70         \}}
+\DoxyCodeLine{71     \}}
+\DoxyCodeLine{72     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{73         \textcolor{keywordflow}{while} ((itvalue-\/>second.n\_bicis() != itvalue-\/>second.tamano()) \&\& (itizq-\/>second.n\_bicis() != 0) \&\& (itder-\/>second.n\_bicis() != 0)) \{}
+\DoxyCodeLine{74             \textcolor{comment}{//si no esta llena la de arriba y ninguna de las de abajo esta vacia}}
+\DoxyCodeLine{75             \textcolor{keywordflow}{if} (itizq-\/>second.n\_bicis() == itder-\/>second.n\_bicis()) \{ \textcolor{comment}{//mismas bicis, mirar emenor id}}
+\DoxyCodeLine{76                 \textcolor{keywordflow}{if} (itizq-\/>second.bici\_menor\_id() < itder-\/>second.bici\_menor\_id()) \{\textcolor{comment}{//bici con menor id a la izquierda}}
+\DoxyCodeLine{77                     bicicletas.\mbox{\hyperlink{classBicicletas_a02d06caac04f8fcd4a4c3a1d1522dab6}{subir}}(itizq-\/>second.bici\_menor\_id(), value);}
+\DoxyCodeLine{78                     itvalue-\/>second.meter\_bicicleta(itizq-\/>second.bici\_menor\_id());}
+\DoxyCodeLine{79                     itizq-\/>second.eliminar(itizq-\/>second.bici\_menor\_id());}
+\DoxyCodeLine{80                 \}}
+\DoxyCodeLine{81                 \textcolor{keywordflow}{else} \{ \textcolor{comment}{//bici con menor id a la derecha}}
+\DoxyCodeLine{82                     bicicletas.\mbox{\hyperlink{classBicicletas_a02d06caac04f8fcd4a4c3a1d1522dab6}{subir}}(itder-\/>second.bici\_menor\_id(), value);}
+\DoxyCodeLine{83                     itvalue-\/>second.meter\_bicicleta(itder-\/>second.bici\_menor\_id());}
+\DoxyCodeLine{84                     itder-\/>second.eliminar(itder-\/>second.bici\_menor\_id());}
+\DoxyCodeLine{85                 \}}
+\DoxyCodeLine{86             \}}
+\DoxyCodeLine{87            }
+\DoxyCodeLine{88             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (itizq-\/>second.n\_bicis() < itder-\/>second.n\_bicis()) \{ \textcolor{comment}{//tiene mas bicis la derecha}}
+\DoxyCodeLine{89                  bicicletas.\mbox{\hyperlink{classBicicletas_a02d06caac04f8fcd4a4c3a1d1522dab6}{subir}}(itder-\/>second.bici\_menor\_id(), value);}
+\DoxyCodeLine{90                 itvalue-\/>second.meter\_bicicleta(itder-\/>second.bici\_menor\_id());}
+\DoxyCodeLine{91                 itder-\/>second.eliminar(itder-\/>second.bici\_menor\_id());}
+\DoxyCodeLine{92             \}}
+\DoxyCodeLine{93          }
+\DoxyCodeLine{94             \textcolor{keywordflow}{else} \{ \textcolor{comment}{//tiene mas bicis la izquierda}}
+\DoxyCodeLine{95                 bicicletas.\mbox{\hyperlink{classBicicletas_a02d06caac04f8fcd4a4c3a1d1522dab6}{subir}}(itizq-\/>second.bici\_menor\_id(), value);}
+\DoxyCodeLine{96                 itvalue-\/>second.meter\_bicicleta(itizq-\/>second.bici\_menor\_id());}
+\DoxyCodeLine{97                 itizq-\/>second.eliminar(itizq-\/>second.bici\_menor\_id());}
+\DoxyCodeLine{98             \}}
+\DoxyCodeLine{99         \}}
+\DoxyCodeLine{100         \textcolor{keywordflow}{while} ((itvalue-\/>second.n\_bicis() != itvalue-\/>second.tamano()) \&\& (itizq-\/>second.n\_bicis() != 0)) \{ \textcolor{comment}{//no queda en un lado, acabar de completar lo maximo posible desde el otro}}
+\DoxyCodeLine{101             bicicletas.\mbox{\hyperlink{classBicicletas_a02d06caac04f8fcd4a4c3a1d1522dab6}{subir}}(itizq-\/>second.bici\_menor\_id(), value);}
+\DoxyCodeLine{102             itvalue-\/>second.meter\_bicicleta(itizq-\/>second.bici\_menor\_id());}
+\DoxyCodeLine{103             itizq-\/>second.eliminar(itizq-\/>second.bici\_menor\_id());}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105         \}}
+\DoxyCodeLine{106         \textcolor{keywordflow}{while} ((itvalue-\/>second.n\_bicis() != itvalue-\/>second.tamano()) \&\& (itder-\/>second.n\_bicis() != 0)) \{ }
+\DoxyCodeLine{107             bicicletas.\mbox{\hyperlink{classBicicletas_a02d06caac04f8fcd4a4c3a1d1522dab6}{subir}}(itder-\/>second.bici\_menor\_id(), arbol.value());}
+\DoxyCodeLine{108             itvalue-\/>second.meter\_bicicleta(itder-\/>second.bici\_menor\_id());}
+\DoxyCodeLine{109             itder-\/>second.eliminar(itder-\/>second.bici\_menor\_id());}
+\DoxyCodeLine{110         \}}
+\DoxyCodeLine{111        }
+\DoxyCodeLine{112     \} }
+\DoxyCodeLine{113     \mbox{\hyperlink{classEstaciones_ae3c447270cb98582328f448649f3e4da}{subir}}(arbol.left(), bicicletas);}
+\DoxyCodeLine{114     \mbox{\hyperlink{classEstaciones_ae3c447270cb98582328f448649f3e4da}{subir}}(arbol.right(), bicicletas);}
+\DoxyCodeLine{115 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classEstaciones_ad67e1da3d8b1257541017c1ffb308a24}\label{classEstaciones_ad67e1da3d8b1257541017c1ffb308a24}} 
+\index{Estaciones@{Estaciones}!subir\_bicis@{subir\_bicis}}
+\index{subir\_bicis@{subir\_bicis}!Estaciones@{Estaciones}}
+\doxysubsubsection{\texorpdfstring{subir\_bicis()}{subir\_bicis()}}
+{\footnotesize\ttfamily void Estaciones\+::subir\+\_\+bicis (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBicicletas}{Bicicletas}} \&}]{bicicletas }\end{DoxyParamCaption})}
+
+
+
+Acerca bicis a la primera estacion. 
+
+\begin{DoxyPrecond}{Precondición}
+Cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Las bicicletas han quedado mas cercanas a la primera estacion 
+\end{DoxyPostcond}
+
+
+Definición en la línea 41 del archivo Estaciones.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{42 \{}
+\DoxyCodeLine{43     \mbox{\hyperlink{classEstaciones_ae3c447270cb98582328f448649f3e4da}{subir}}(\mbox{\hyperlink{classEstaciones_a2e761ab1f06ecce6d1f401b201fb2b68}{arbol\_estaciones}}, bicicletas);}
+\DoxyCodeLine{44 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classEstaciones_a2e761ab1f06ecce6d1f401b201fb2b68}\label{classEstaciones_a2e761ab1f06ecce6d1f401b201fb2b68}} 
+\index{Estaciones@{Estaciones}!arbol\_estaciones@{arbol\_estaciones}}
+\index{arbol\_estaciones@{arbol\_estaciones}!Estaciones@{Estaciones}}
+\doxysubsubsection{\texorpdfstring{arbol\_estaciones}{arbol\_estaciones}}
+{\footnotesize\ttfamily Bin\+Tree$<$string$>$ Estaciones\+::arbol\+\_\+estaciones\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Arbol de ids de estaciones. 
+
+
+
+Definición en la línea 32 del archivo Estaciones.\+hh.
+
+\mbox{\Hypertarget{classEstaciones_a482f87c359c32a714b2ab313ba12f554}\label{classEstaciones_a482f87c359c32a714b2ab313ba12f554}} 
+\index{Estaciones@{Estaciones}!id\_estaciones\_estacion@{id\_estaciones\_estacion}}
+\index{id\_estaciones\_estacion@{id\_estaciones\_estacion}!Estaciones@{Estaciones}}
+\doxysubsubsection{\texorpdfstring{id\_estaciones\_estacion}{id\_estaciones\_estacion}}
+{\footnotesize\ttfamily map$<$string, \mbox{\hyperlink{classEstacion}{Estacion}}$>$ Estaciones\+::id\+\_\+estaciones\+\_\+estacion\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Mapa con todas las id de las estaciones y su respectiva \mbox{\hyperlink{classEstacion}{Estacion}}. 
+
+
+
+Definición en la línea 34 del archivo Estaciones.\+hh.
+
+\mbox{\Hypertarget{classEstaciones_af8f40f86cd7e5f556bc4af5f45863009}\label{classEstaciones_af8f40f86cd7e5f556bc4af5f45863009}} 
+\index{Estaciones@{Estaciones}!plazas@{plazas}}
+\index{plazas@{plazas}!Estaciones@{Estaciones}}
+\doxysubsubsection{\texorpdfstring{plazas}{plazas}}
+{\footnotesize\ttfamily int Estaciones\+::plazas\hspace{0.3cm}{\ttfamily [private]}}
+
+brief Entero con las plazas libres del conunto de estaciones 
+
+Definición en la línea 36 del archivo Estaciones.\+hh.
+
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Estaciones_8hh}{Estaciones.\+hh}}\item 
+\mbox{\hyperlink{Estaciones_8cc}{Estaciones.\+cc}}\end{DoxyCompactItemize}
