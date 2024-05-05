@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Bicing bifurcado: Fichero Fuente Bicicleta.cc</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Bicing bifurcado
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Bicicleta.cc</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Bicicleta_8cc.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Bicicleta_8hh.html">Bicicleta.hh</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classBicicleta.html#a88dcdce23a947dd36ca597090b47d416">    7</a></span>&#160;<a class="code" href="classBicicleta.html#a88dcdce23a947dd36ca597090b47d416">Bicicleta::Bicicleta</a>(<span class="keywordtype">string</span> identificador_bicicleta, <span class="keywordtype">string</span> identificador_estacion)</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="classBicicleta.html#a26a020af7fc38a2140dbb88573b0241d">identificador</a> = identificador_bicicleta;  </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    list&lt;pair&lt;string, string&gt;&gt; h;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="classBicicleta.html#a8478220a2b0d89734674162b5477a6a2">historial</a> = h;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="classBicicleta.html#abb720dbe6e84b92774674842ae0c4e96">ubi</a> = identificador_estacion;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classBicicleta.html#a5fb893c51f0918fc5af19dfd63450aab">   15</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classBicicleta.html#a5fb893c51f0918fc5af19dfd63450aab">Bicicleta::mod_ubicacion</a>(<span class="keywordtype">string</span>&amp; identificador_estacion) </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="classBicicleta.html#abb720dbe6e84b92774674842ae0c4e96">ubi</a> = identificador_estacion;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classBicicleta.html#a9b0d3f3c0cecb8c546bb1a8dec3c24e1">   22</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classBicicleta.html#a9b0d3f3c0cecb8c546bb1a8dec3c24e1">Bicicleta::mover</a>(<span class="keywordtype">string</span>&amp; identificador_estacion)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="classBicicleta.html#a8478220a2b0d89734674162b5477a6a2">historial</a>.push_back(pair &lt;string, string&gt;(<a class="code" href="classBicicleta.html#abb720dbe6e84b92774674842ae0c4e96">ubi</a>, identificador_estacion));</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="classBicicleta.html#abb720dbe6e84b92774674842ae0c4e96">ubi</a> = identificador_estacion;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classBicicleta.html#ab89325e8dcabdfc9edb93c51fb2132ed">   28</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classBicicleta.html#ab89325e8dcabdfc9edb93c51fb2132ed">Bicicleta::escribir_historial</a>(){</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">auto</span> it = <a class="code" href="classBicicleta.html#a8478220a2b0d89734674162b5477a6a2">historial</a>.begin();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">int</span> s = <a class="code" href="classBicicleta.html#a8478220a2b0d89734674162b5477a6a2">historial</a>.size();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0 ; i &lt; s; ++i) {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        cout &lt;&lt; it-&gt;first &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; it-&gt;second &lt;&lt; endl;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        ++it;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classBicicleta.html#ae8f5da87656d32d54eb2ed381ca520bb">   36</a></span>&#160;<span class="keywordtype">string</span> <a class="code" href="classBicicleta.html#ae8f5da87656d32d54eb2ed381ca520bb">Bicicleta::ubicacion</a>()<span class="keyword"> const</span>{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classBicicleta.html#abb720dbe6e84b92774674842ae0c4e96">ubi</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="ttc" id="aBicicleta_8hh_html"><div class="ttname"><a href="Bicicleta_8hh.html">Bicicleta.hh</a></div><div class="ttdoc">Especificación de la clase Bicicleta.</div></div>
+<div class="ttc" id="aclassBicicleta_html_a26a020af7fc38a2140dbb88573b0241d"><div class="ttname"><a href="classBicicleta.html#a26a020af7fc38a2140dbb88573b0241d">Bicicleta::identificador</a></div><div class="ttdeci">string identificador</div><div class="ttdoc">Identificador de la bicicleta.</div><div class="ttdef"><b>Definition:</b> <a href="Bicicleta_8hh_source.html#l00029">Bicicleta.hh:29</a></div></div>
+<div class="ttc" id="aclassBicicleta_html_a5fb893c51f0918fc5af19dfd63450aab"><div class="ttname"><a href="classBicicleta.html#a5fb893c51f0918fc5af19dfd63450aab">Bicicleta::mod_ubicacion</a></div><div class="ttdeci">void mod_ubicacion(string &amp;identificador_estacion)</div><div class="ttdoc">Cambia el id de la ubicacion actual de la bicicleta.</div><div class="ttdef"><b>Definition:</b> <a href="Bicicleta_8cc_source.html#l00015">Bicicleta.cc:15</a></div></div>
+<div class="ttc" id="aclassBicicleta_html_a8478220a2b0d89734674162b5477a6a2"><div class="ttname"><a href="classBicicleta.html#a8478220a2b0d89734674162b5477a6a2">Bicicleta::historial</a></div><div class="ttdeci">list&lt; pair&lt; string, string &gt; &gt; historial</div><div class="ttdoc">Historial de estaciones en las cuales ha estado la bicicleta.</div><div class="ttdef"><b>Definition:</b> <a href="Bicicleta_8hh_source.html#l00031">Bicicleta.hh:31</a></div></div>
+<div class="ttc" id="aclassBicicleta_html_a88dcdce23a947dd36ca597090b47d416"><div class="ttname"><a href="classBicicleta.html#a88dcdce23a947dd36ca597090b47d416">Bicicleta::Bicicleta</a></div><div class="ttdeci">Bicicleta(string identificador_bicicleta, string identificador_estacion)</div><div class="ttdoc">Creadora por defecto.</div><div class="ttdef"><b>Definition:</b> <a href="Bicicleta_8cc_source.html#l00007">Bicicleta.cc:7</a></div></div>
+<div class="ttc" id="aclassBicicleta_html_a9b0d3f3c0cecb8c546bb1a8dec3c24e1"><div class="ttname"><a href="classBicicleta.html#a9b0d3f3c0cecb8c546bb1a8dec3c24e1">Bicicleta::mover</a></div><div class="ttdeci">void mover(string &amp;identificador_estacion)</div><div class="ttdoc">Mueve la bicicleta.</div><div class="ttdef"><b>Definition:</b> <a href="Bicicleta_8cc_source.html#l00022">Bicicleta.cc:22</a></div></div>
+<div class="ttc" id="aclassBicicleta_html_ab89325e8dcabdfc9edb93c51fb2132ed"><div class="ttname"><a href="classBicicleta.html#ab89325e8dcabdfc9edb93c51fb2132ed">Bicicleta::escribir_historial</a></div><div class="ttdeci">void escribir_historial()</div><div class="ttdoc">Escribe los viajes que ha hecho una bicicleta.</div><div class="ttdef"><b>Definition:</b> <a href="Bicicleta_8cc_source.html#l00028">Bicicleta.cc:28</a></div></div>
+<div class="ttc" id="aclassBicicleta_html_abb720dbe6e84b92774674842ae0c4e96"><div class="ttname"><a href="classBicicleta.html#abb720dbe6e84b92774674842ae0c4e96">Bicicleta::ubi</a></div><div class="ttdeci">string ubi</div><div class="ttdoc">Estacion actual en la que se encuentra la bicicleta.</div><div class="ttdef"><b>Definition:</b> <a href="Bicicleta_8hh_source.html#l00033">Bicicleta.hh:33</a></div></div>
+<div class="ttc" id="aclassBicicleta_html_ae8f5da87656d32d54eb2ed381ca520bb"><div class="ttname"><a href="classBicicleta.html#ae8f5da87656d32d54eb2ed381ca520bb">Bicicleta::ubicacion</a></div><div class="ttdeci">string ubicacion() const</div><div class="ttdoc">Consultora que devuelve la ubicacion de la bicicleta.</div><div class="ttdef"><b>Definition:</b> <a href="Bicicleta_8cc_source.html#l00036">Bicicleta.cc:36</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>
